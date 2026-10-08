@@ -1,0 +1,18 @@
+{
+  "name": "projectmatch-ai-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ProjectMatch AI - AI-Powered Student Project Recommendation & Blueprint Engine",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "seed": "npm --prefix server run seed",
+    "dev:server": "npm --prefix server start",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "concurrently --names \"SERVER,CLIENT\" --prefix-colors \"blue,green\" \"npm --prefix server start\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
